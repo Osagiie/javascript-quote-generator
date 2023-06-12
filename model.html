@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="C:\Users\Oo-PC\did\modelc.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+<h3>Quote Generator</h3>
+        </div>
+
+        <div class="main-content">
+            <div class="text-area">
+                <span class="quote">
+                    "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
+                </span>
+            </div>
+
+            <div class="writer">-xxxx</div>
+
+            <div class="button-area">
+                <div class="btn">
+                    <button id=""Qbtn>Get Quote</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script>
+
+    const quote =[{
+        quote: '"Nulla gravida tellus sed mi posuere, sit amet dictum quam convallis."',
+        writer: '-dddd'
+    },
+    
+    {
+        quote: '"Praesent sem sem, sagittis gravida turpis eget, commodo porttitor leo."',
+        writer: '-qqqq'
+    },
+    
+    {
+        quote: '"Proin venenatis, ipsum lacinia vehicula rutrum, velit mi tristique tellus."',
+        writer: '-yyyy'
+    },
+    
+    {
+        quote: '"Ut in ipsum quis purus dapibus sagittis tempor ut ex."',
+        writer: '-kkkk'
+    },
+    
+    {
+        quote: '"Morbi id dui vel nibh vehicula ornare. Interdum et malesuada."',
+        writer: '-mmmm'
+    },
+    
+    {
+        quote: '"Suspendisse ac nibh lacus. Proin venenatis, ipsum ."',
+        writer: '-nnnn'
+    },
+    ]
+    
+    let btn = document.querySelector("#Qbtn");
+    let quotes = document.querySelector(".quote");
+    let writer = document.querySelector(".writer");
+    
+    btn.addEventListener("click", function(){
+        let random = Math.floor(Math.random() * quotes.length);
+    
+        quote.innerHTML = quotes[random].quote;
+    
+        writer.innerHTML = quotes[random].writer;
+    }
+    )</script>
+</body>
+</html>
